@@ -1,0 +1,97 @@
+1. You want to run integration tests before unit tests during your Maven build process. Which plugin configuration ensures this ordering in the Maven lifecycle?
+A) Use maven-surefire-plugin with custom phase ordering
+B) Use maven-failsafe-plugin for integration tests and bind to verify phase
+C) Use maven-clean-plugin to trigger integration tests first
+D) Define custom @Order annotations in JUnit
+
+2. In JUnit 5, which annotation is used to conditionally disable a test method based on a runtime environment variable?
+A) @Disabled
+B) @EnabledIf
+C) @EnabledIfEnvironmentVariable
+D) @ConditionalOnProperty
+
+3. You need to test a private method inside a class in a legacy codebase. What’s the best approach in terms of good testing practice?
+A) Use reflection to access the private method
+B) Change the method to public for testing
+C) Write tests through public interfaces that use the private method
+D) Use PowerMock to directly invoke the private method
+
+4. Which design pattern is best suited when you want to provide a simplified interface to a complex subsystem?
+A) Adapter
+B) Proxy
+C) Facade
+D) Strategy
+
+5. In JPA, which annotation is used to ensure that only one thread can update an entity at a time?
+A) @Id
+B) @Version
+C) @Lock
+D) @Transactional
+
+6. In JUnit 5, which of the following is TRUE about @BeforeEach and @BeforeAll?
+A) Both run once before all tests
+B) @BeforeEach runs before each test; @BeforeAll runs once per test class
+C) @BeforeAll is executed per test method
+D) Both require static methods
+
+7. Which of the following JPA relationships is used to represent many-to-many with a join table?
+A)
+@ManyToMany
+@JoinTable(name = "student_course", 
+    joinColumns = @JoinColumn(name = "student_id"), 
+    inverseJoinColumns = @JoinColumn(name = "course_id"))
+private List<Course> courses;
+B)
+
+@OneToMany(mappedBy = "student")
+private List<Course> courses;
+C)
+
+@OneToOne
+@JoinColumn(name = "course_id")
+private Course course;
+D)
+
+@ManyToOne
+private Course course;
+8. You're implementing audit logging in your JPA entities. Which interface or annotations help detect entity lifecycle changes like insert/update/delete?
+A) @EntityListeners with a listener class
+B) @PreDestroy on the entity
+C) @Observer annotation
+D) @ControllerAdvice
+
+9. A payment microservice uses multiple strategies for processing: card, UPI, wallet, etc. Which pattern fits best for injecting behavior dynamically?
+A) Builder
+B) Strategy
+C) Chain of Responsibility
+D) Template Method
+
+10. Which statement about JUnit 5 @Nested test classes is correct?
+A) They must be public and static
+B) They are deprecated in JUnit 5
+C) They allow logical grouping of related test cases
+D) They cannot access the outer test class's members
+
+
+Answer:
+
+==============================================
+B — maven-failsafe-plugin is designed to run integration tests in the verify phase, after surefire runs unit tests.
+
+C — @EnabledIfEnvironmentVariable lets you control test execution based on environment variables.
+
+C — Best practice is to test behavior via public methods; don’t directly test private methods.
+
+C — Facade simplifies interaction with complex systems.
+
+B — @Version is used for optimistic locking in JPA to prevent concurrent updates.
+
+B — @BeforeEach runs before each test method; @BeforeAll runs once before all and must be static unless in a @TestInstance(Lifecycle.PER_CLASS).
+
+A — This configuration correctly defines a many-to-many relationship with a join table.
+
+A — Use @EntityListeners along with lifecycle callbacks like @PrePersist, @PostUpdate.
+
+B — Strategy pattern is ideal for dynamic behavior injection like different payment methods.
+
+C — @Nested allows logical grouping and can access outer class members if not static.

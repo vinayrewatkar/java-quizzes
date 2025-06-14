@@ -1,0 +1,94 @@
+Servlet , JSP, EJB & JMS. 
+============================
+1.In Spring MVC, what is the purpose of the bean configuration related to view resolution?
+
+A. To manage database connections
+B. To resolve logical view names to actual JSP files under /WEB-INF/views/
+C. To inject dependencies into service classes
+D. To configure security settings for the application
+ 	 	
+
+2.Which of the following Spring configuration snippets correctly resolves logical view names to JSP files located under /WEB-INF/views/ with a .jsp suffix?
+
+A. <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/pages/" />
+    <property name="suffix" value=".html" />
+</bean>
+
+B. <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/views/" />
+    <property name="suffix" value=".jsp" />
+</bean>
+
+C.<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/views/" />
+    <property name="suffix" value=".jsp" /> 
+  </bean>
+D.<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+    <property name="prefix" value="/WEB-INF/views/" />
+    <property name="suffix" value=".jsp" />
+  </bean>
+
+Answer :1.B    2.C 
+
+
+JSP Lifecycle Methods
+=========================
+What is JSP (JavaServer Pages)?
+---------------------------------
+JSP (JavaServer Pages) is a server-side technology used to create dynamic, platform-independent web content. It's a part of Java EE (Jakarta EE) and allows developers to embed Java code directly into HTML pages using special JSP tags.
+
+Why Do We Need JSP?
+---------------------------------
+We need JSP because it helps solve a key problem in web development:
+Mixing dynamic content generation with HTML presentation in a clean and maintainable way.
+
+
+Method	Purpose
+ jspInit()	Called once when the JSP is initialized; used for setup like DB connections.
+_jspService()	Called every time the JSP handles a request; processes client input.
+ jspDestroy()	Called once when the JSP is being removed; used for cleanup.
+
+These methods are part of the servlet lifecycle, and in JSP, they map as follows:
+
+jspInit() → like init() in servlets.
+
+_jspService() → handles the request, similar to doGet()/doPost() in servlets.
+
+jspDestroy() → like destroy() in servlets.
+
+✅ MCQ 1
+Question:
+Which method in a JSP is called only once when the JSP is first loaded into memory?
+
+A. _jspService()
+B. jspInit()
+C. init()
+D. jspDestroy()
+
+Correct Answer:
+B. jspInit()
+
+✅ MCQ 2
+Question:
+Which JSP method is automatically called to handle every HTTP request to the JSP page?
+
+A. jspInit()
+B. service()
+C. _jspService()
+D. jspDestroy()
+
+Correct Answer:
+C. _jspService()
+
+✅ MCQ 3
+Question:
+What is the purpose of the jspDestroy() method in a JSP?
+
+A. To handle client requests
+B. To initialize the JSP page
+C. To release resources before the JSP is unloaded
+D. To compile the JSP file
+
+Correct Answer:
+C. To release resources before the JSP is unloaded

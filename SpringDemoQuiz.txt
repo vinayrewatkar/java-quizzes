@@ -1,0 +1,100 @@
+1. Which of the following are valid implementations of the BeanFactory interface in Spring?
+A. XmlBeanFactory===
+B. ClassPathXmlApplicationContext
+C. DefaultListableBeanFactory===
+D. AnnotationConfigApplicationContext
+
+2. What is the purpose of Spring's InternalResourceViewResolver?
+A. Resolves views to internal Java methods
+B. Resolves logical view names to .jsp files under a predefined directory===>
+C. Automatically compiles JSP pages
+D. Converts controller return values to JSON
+
+3. Which mechanism allows you to register objects created outside the Spring container?
+A. @Component
+B. @Bean
+C. BeanDefinitionRegistry
+D. ConfigurableListableBeanFactory#registerSingleton
+
+4. What is the role of IdGenerator and KeyGenerator in Spring?
+A. To manage primary keys in Spring Data JPA
+B. To define strategies for generating unique keys for caching or identification
+C. To encrypt sensitive data
+D. To configure method security
+
+5. In Spring MVC, how can a method with void return type still send data to the client?
+A. By writing directly to HttpServletResponse
+B. It is not possible
+C. Using @ResponseBody
+D. By returning a ModelAndView object
+
+6. Which of the following correctly defines a fallback method in Spring MVC using @RequestMapping?
+A.
+@RequestMapping("/**")
+public String fallback() {
+    return "fallback";
+}
+B.
+@GetMapping("/*")
+public String handle() {
+    return "error";
+}
+C.@RequestMapping("*")
+public ResponseEntity<?> notFound() {
+    return ResponseEntity.notFound().build();
+}
+D.
+@RequestMapping("/**")
+@ResponseBody
+public String fallback() {
+    return "fallback route";
+}
+
+7. Given the following code, what happens when methodA() is called?
+
+@Transactional(propagation = Propagation.REQUIRES_NEW)
+public class MyService {
+    public void methodA() {
+        methodB();
+    }
+
+    @Transactional(propagation = Propagation.MANDATORY)
+    public void methodB() {
+        // Some logic
+    }
+}
+A. methodB() executes in a new transaction
+B. methodB() throws an exception due to no existing transaction
+C. Both methods run in the same transaction
+D. methodB() runs non-transactionally
+
+8. How can you implement global exception handling only for controllers in com.app.controllers?
+A. Use @ControllerAdvice with basePackages = "com.app.controllers"
+B. Annotate each controller with a custom exception handler
+C. Use AOP to wrap controller methods
+D. Create a filter to catch exceptions globally
+
+9. Which statement best describes the Model-View-Controller (MVC) pattern in Spring?
+A. It merges the business logic and presentation layers
+B. It separates the input logic, business logic, and UI logic into distinct components
+C. It makes the controller responsible for rendering views
+D. It enforces a strict coupling between model and view
+
+10. A client sends a POST request to /product/info, but the controller method only handles @RequestMapping("/info"). What happens?
+A. The method executes and returns "Product information"
+B. A 405 Method Not Allowed error is returned
+C. A 500 Internal Server Error occurs
+D. Spring silently converts the POST to GET
+
+
+=========Answers========
+1. A,C
+2. B
+3. D
+4. B
+5. A
+6. A,D
+7. B
+8. A
+9. B
+10.B

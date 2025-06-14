@@ -1,0 +1,83 @@
+1. Which interface is a root interface for accessing the Spring container?
+A. ApplicationContext
+B. BeanFactory===>
+C. ConfigurableApplicationContext
+D. WebApplicationContext
+
+2. Which annotation is used to create a RESTful web service controller in Spring MVC?
+A. @Controller
+B. @RestService
+C. @RestController====>
+D. @WebController
+
+3. What does @SpringBootApplication include by default?
+A. @EnableAutoConfiguration
+B. @ComponentScan
+C. @Configuration
+D. All of the above===>
+
+5. What is the correct way to define a primary bean when multiple candidates exist?
+A. @AutoBean
+B. @Primary===>
+C. @Bean(main=true)
+D. @MainBean
+
+6. Which of these is NOT a valid ID generation strategy in Spring Data JPA?
+A. AUTO
+B. UUID
+C. MANUAL====>
+D. IDENTITY
+
+7. How can you register an external object (e.g., from a third-party library) as a Spring bean?
+A. Using @Component
+B. Using @Autowired
+C. Using @Bean in a @Configuration class
+D. Spring cannot register external objects
+
+8. In Spring Security, which filter is responsible for handling authentication?
+A. AuthorizationFilter
+B. DelegatingFilterProxy
+C. UsernamePasswordAuthenticationFilter===>
+D. SecurityContextFilter
+
+9. What does @Transactional do in Spring?
+A. Creates a multithreaded transaction
+B. Marks a method as cacheable
+C. Wraps a method in a database transaction===>
+D. Schedules the method for delayed execution
+
+10. What happens if no ID is provided to a JPA entity and the ID strategy is GenerationType.IDENTITY?
+A. Error is thrown
+B. Random UUID is assigned
+C. Database auto-generates the ID===>
+D. Null is used as ID
+
+11. Which annotation is used to bind external configuration properties in Spring Boot?
+A. @PropertyValue
+B. @ConfigurationValue
+C. @Value
+D. @ConfigurationProperties===>
+
+12. What is the purpose of @EnableWebSecurity?
+A. Disables web security
+B. Enables basic HTTP security
+C. Customizes Spring MVC configuration
+D. Enables Spring Security’s web security support===>
+
+13. Which HTTP status code is typically returned by a Spring MVC controller method after successful POST?
+A. 200 OK
+B. 201 Created====>
+C. 202 Accepted
+D. 204 No Content
+
+14. Which component scans and instantiates Spring beans at application startup?
+A. BeanFactory
+B. DispatcherServlet
+C. ComponentScanner
+D. ApplicationContext===>
+
+15. In Spring Boot, how can you exclude an auto-configuration class?
+A. @SpringBootApplication(exclude = {ClassName.class})
+B. @DisableAutoConfiguration
+C. @SpringBootAutoExclude
+D. @ExcludeConfiguration

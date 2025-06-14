@@ -1,0 +1,89 @@
+1. Which of the following are valid implementations of the BeanFactory interface in Spring?
+ A. XmlBeanFactory
+ C. DefaultListableBeanFactory
+
+	XmlBeanFactory and DefaultListableBeanFactory are direct implementations of the BeanFactory interface.
+
+	ClassPathXmlApplicationContext and AnnotationConfigApplicationContext implement ApplicationContext, which extends 	BeanFactory, but they are not direct implementations.
+
+2. What is the purpose of Spring's InternalResourceViewResolver?
+	
+	B. Resolves logical view names to .jsp files under a predefined directory
+
+	It typically resolves view names like "home" to /WEB-INF/views/home.jsp.
+
+	Used for resolving internal resources like JSP pages.
+
+3. Which mechanism allows you to register objects created outside the Spring container?
+	D. ConfigurableListableBeanFactory#registerSingleton
+
+	This method allows you to manually register singleton beans that are not defined in Spring configuration.
+
+	@Component and @Bean are used for components managed by Spring.
+
+	BeanDefinitionRegistry is used for defining bean metadata but not directly for object registration.
+
+4. What is the role of IdGenerator and KeyGenerator in Spring?
+	
+	B. To define strategies for generating unique keys for caching or identification
+
+	These are used in the Spring caching abstraction to generate keys for caching method results.
+
+5. In Spring MVC, how can a method with void return type still send data to the client?
+	A. By writing directly to HttpServletResponse
+
+	You can manually write data to the response stream.
+
+	@ResponseBody requires a return value.
+
+	ModelAndView requires a return type, so it’s incompatible with void.
+
+6. Which of the following correctly defines a fallback method in Spring MVC using @RequestMapping?
+	 D.
+	@RequestMapping("/**")
+	@ResponseBody
+	public String fallback() 
+	{
+    		return "fallback route";
+	}
+	This correctly matches all unmatched routes and uses @ResponseBody to return plain text.
+
+	Other options either use incorrect patterns or do not guarantee proper fallback behavior.
+
+7. What happens when methodA() is called?
+
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public class MyService 
+	{
+    		public void methodA() 
+		{
+        		methodB();
+    		}
+
+   		 @Transactional(propagation = Propagation.MANDATORY)
+    		public void methodB() 
+		{
+       	 		// Some logic
+    		}
+	}
+
+	B. methodB() throws an exception due to no existing transaction
+
+	MANDATORY means a transaction must already exist. But since the call is internal and not through a Spring proxy, 	methodB() is not transactional → exception is thrown.
+
+8. How can you implement global exception handling only for controllers in com.app.controllers?
+	A. Use @ControllerAdvice with basePackages = "com.app.controllers"
+	This applies exception handling only to controllers in the specified package.
+
+9. Which statement best describes the Model-View-Controller (MVC) pattern in Spring?
+	B. It separates the input logic, business logic, and UI logic into distinct components
+
+	That’s the definition of MVC:
+	Model → business/data
+	View → presentation
+	Controller → input logic
+
+10. A client sends a POST request to /product/info, but the controller method only handles @RequestMapping("/info"). What happens?
+	B. A 405 Method Not Allowed error is returned
+	@RequestMapping("/info") by default only maps GET requests.
+	A POST without proper mapping causes a 405 error.

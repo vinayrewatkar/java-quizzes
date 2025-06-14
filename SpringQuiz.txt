@@ -1,0 +1,106 @@
+Spring Core
+Which of the following annotations is used for automatic component scanning in Spring?
+A. @Autowired
+B. @ComponentScan
+C. @Qualifier
+D. @SpringBootApplication
+
+What is the role of the @Autowired annotation?
+A. To configure the application context
+B. To mark a class as a Spring component
+C. To inject dependencies automatically
+D. To scan packages for configuration classes
+
+Which file is traditionally used to configure Spring beans in XML?
+A. web.xml
+B. application.properties
+C. applicationContext.xml
+D. dispatcher-servlet.xml
+
+Spring MVC
+Which annotation is used to define a Spring MVC controller?
+A. @Controller
+B. @Service
+C. @Component
+D. @Repository
+
+What is the default view resolver in Spring MVC?
+A. InternalResourceViewResolver
+B. UrlBasedViewResolver
+C. BeanNameViewResolver
+D. None of the above
+
+Which annotation is used to bind request parameters to method arguments in Spring MVC?
+A. @RequestParam
+B. @PathVariable
+C. @Autowired
+D. @RequestMapping
+
+Spring JPA
+Which annotation is used to specify a primary key in an entity class?
+A. @Entity
+B. @Id
+C. @GeneratedValue
+D. @Column
+
+Which annotation is used to mark a class as a JPA entity?
+A. @Table
+B. @Entity
+C. @Persistence
+D. @Data
+
+Which attribute in @GeneratedValue is used to specify the strategy for ID generation?
+A. type
+B. value
+C. strategy
+D. mode
+
+Spring Data JPA
+Which interface should be extended to create a repository in Spring Data JPA?
+A. CrudRepository
+B. JpaRepository
+C. Repository
+D. All of the above
+
+Which annotation enables JPA repositories in a Spring application?
+A. @EnableJpaRepositories
+B. @EnableRepositories
+C. @EntityScan
+D. @EnableTransactionManagement
+
+Which of the following methods are inherited from JpaRepository?
+A. save()
+B. findAll()
+C. deleteById()
+D. All of the above
+
+===================Answers=====
+
+
+Spring Core
+B. @ComponentScan
+
+C. To inject dependencies automatically
+
+C. applicationContext.xml
+
+Spring MVC
+A. @Controller
+
+A. InternalResourceViewResolver
+
+A. @RequestParam
+
+Spring JPA
+B. @Id
+
+B. @Entity
+
+C. strategy
+
+Spring Data JPA
+D. All of the above
+
+A. @EnableJpaRepositories
+
+D. All of the above

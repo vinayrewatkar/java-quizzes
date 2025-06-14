@@ -1,0 +1,90 @@
+1. Which of the following is true about HttpServlet class?
+A. It is part of java.io package
+B. It must override run() method
+C. It extends GenericServlet
+D. It implements Runnable
+
+2. What does the service() method in a servlet do?
+A. It initializes the servlet
+B. It destroys the servlet
+C. It handles both GET and POST requests
+D. It is used only to handle POST requests
+
+3. Which method is used to forward a request to another resource?
+A. request.redirect()
+B. response.forward()
+C. request.getRequestDispatcher().include()
+D. request.getRequestDispatcher().forward()
+
+4. What is the output type of getServletContext()?
+A. HttpServletRequest
+B. ServletConfig
+C. ServletContext
+D. ServletResponse
+
+5. Which scope is NOT valid in servlets?
+A. Request scope
+B. Session scope
+C. Page scope
+D. Application scope
+
+6. What is the correct syntax to include a file during JSP translation time?
+A. <jsp:include page="header.jsp" />
+B. <%@ include file="header.jsp" %>
+C. <jsp:directive.include file="header.jsp" />
+D. Both B and C
+
+7. Which object is not an implicit object in JSP?
+A. application
+B. config
+C. request
+D. scanner
+
+8. What does a JSP page translate into?
+A. Servlet
+B. JavaScript
+C. HTML
+D. XML
+
+9. Which tag is used for error handling in JSP?
+A. <jsp:catch>
+B. <jsp:error>
+C. <%@ errorPage %>
+D. <jsp:handleError>
+
+10. Which directive is used to import Java classes in JSP?
+A. <jsp:import>
+B. <%@ page import="java.util.*" %>
+C. <jsp:useBean>
+D. <%@ import %>
+
+
+11. Which of the following is NOT a type of Enterprise JavaBean (EJB)?
+A. Session Bean
+B. Message-driven Bean
+C. Entity Bean
+D. Stateful Bean Manager
+
+12. What is the role of @Stateless in EJB?
+A. Indicates the bean is stateful
+B. Indicates the bean handles messaging
+C. Marks the bean as having no conversational state
+D. Enables serialization of bean
+
+13. Which interface must a remote EJB implement?
+A. Serializable
+B. HttpSessionListener
+C. javax.ejb.EJBRemote
+D. A custom interface annotated with @Remote
+
+14. What happens when a stateful session bean times out?
+A. It is passivated
+B. It is destroyed by the container
+C. It is converted into a stateless bean
+D. It throws a compile-time error
+
+15. Which annotation is used to inject an EJB into another EJB or servlet?
+A. @Inject
+B. @EJB
+C. @Autowired
+D. @Enterprise

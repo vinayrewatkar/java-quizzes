@@ -1,0 +1,60 @@
+1. What is the purpose of the Java Platform Module System (JPMS) introduced in Java 9?
+A. Improve UI performance
+B. Encapsulate packages and control dependencies
+C. Reduce garbage collection
+D. Increase thread execution speed
+
+2. Which of the following is used to launch JShell in Java 9?
+A. java shell
+B. javac -jshell
+C. jshell
+D. java -repl
+
+3. Which keyword is used to define a module in Java 9?
+A. module
+B. package
+C. modular
+D. unit
+
+4. What is the correct filename for a Java module declaration?
+A. module-definition.java
+B. module.java
+C. module-info.java
+D. mod-info.java
+
+5. What is a key benefit of Java 9's modularity?
+A. Faster network I/O
+B. Improved GUI rendering
+C. Better encapsulation and maintainability
+D. Faster compilation only
+
+6. Can interfaces have private methods starting in Java 9?
+A. No, interfaces can't have private methods
+B. Yes, but only in abstract classes
+C. Yes, for use in default or static methods
+D. Only public methods are allowed in interfaces
+
+7. Which of the following is not a valid use of JShell?
+A. Testing Java expressions interactively
+B. Exploring APIs
+C. Running large-scale production code
+D. Learning syntax quickly
+
+8. What Java 9 feature lets a module expose only selected packages to others?
+A. require
+B. export
+C. provide
+D. open
+
+9. In a module-info.java file, which statement is used to import another module?
+A. import
+B. require
+C. export
+D. include
+
+10. Which Java 9 feature enables precompiling classes to native code?
+A. Project Jigsaw
+B. Ahead-of-Time Compilation (AOT)
+C. Just-In-Time Compilation (JIT)
+D. Project Loom
+

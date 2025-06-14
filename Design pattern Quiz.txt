@@ -1,0 +1,155 @@
+Q1. You're developing a configuration class that must load settings only once and provide global access throughout your application. You need to ensure that only one instance is created and used, even in multi-threaded environments.
+
+Which implementation should you prefer?
+
+A. Lazy Initialization without synchronization
+B. Synchronized block Singleton
+C. Enum-based Singleton
+D. Prototype Pattern
+
+Q2. You’re working on a project that deals with different types of credit cards: Silver, Gold, and Platinum. Based on the user’s profile, a specific card object should be returned. Which pattern is best for this?
+
+A. Factory Pattern
+B. Abstract Factory Pattern
+C. Builder Pattern
+D. Singleton Pattern
+
+Q3.You are designing a class that represents a complex object like a Pizza, which can have optional components like cheese, toppings, and crust type. You want to avoid complex constructors with multiple parameters.
+
+Which pattern suits best here?
+
+A. Prototype Pattern
+B. Factory Pattern
+C. Builder Pattern
+D. Adapter Pattern
+
+Q4.You are building a coffee shop billing system where a base coffee price can be extended with add-ons like milk, cream, or sugar dynamically.
+
+Which pattern helps here?
+
+A. Proxy Pattern
+B. Decorator Pattern
+C. Composite Pattern
+D. Strategy Pattern
+
+Q5. Your application monitors weather data and updates multiple displays (mobile app, website, alert system) whenever data changes. What design pattern should you apply?
+
+A. Mediator Pattern
+B. Observer Pattern
+C. Bridge Pattern
+D. Chain of Responsibility Pattern
+
+Q6.In your e-commerce app, different discount strategies like seasonal discount, coupon code, and loyalty program are applied based on context.
+
+Which pattern will allow you to switch between these strategies at runtime?
+
+A. Template Pattern
+B. Strategy Pattern
+C. Factory Pattern
+D. Composite Pattern
+
+Q7. You're designing an ETL (Extract, Transform, Load) pipeline where extract, transform, and load follow a fixed structure but implementations vary across databases.
+
+Which pattern would you use?
+
+A. Strategy Pattern
+B. Template Method Pattern
+C. Bridge Pattern
+D. Observer Pattern
+
+Q8. You’re integrating a third-party library with your system. The interface of the library doesn’t match your system's expected format. What design pattern helps you bridge this mismatch?
+
+A. Proxy Pattern
+B. Adapter Pattern
+C. Decorator Pattern
+D. Composite Pattern
+
+Q9. Your application allows access to secured resources, but you want to introduce an access control check before allowing any operation.
+
+Which design pattern is most suitable?
+
+A. Proxy Pattern
+B. Decorator Pattern
+C. Facade Pattern
+D. Factory Pattern
+
+Q10. In a drawing application, users can perform and undo actions like draw line, fill color, erase, etc. You want to keep these actions as history for undo/redo.
+
+Which pattern do you implement?
+
+A. State Pattern
+B. Strategy Pattern
+C. Command Pattern
+D. Observer Pattern
+
+
+
+Q1	C. Enum-based Singleton	Thread-safe, handles serialization, and simplest way in Java.
+Q2	A. Factory Pattern	Best for creating objects without specifying exact class.
+Q3	C. Builder Pattern	Helps build complex objects step by step.
+Q4	B. Decorator Pattern	Adds responsibilities to objects dynamically.
+Q5	B. Observer Pattern	Suitable for one-to-many data update relationships.
+Q6	B. Strategy Pattern	Allows switching algorithms at runtime.
+Q7	B. Template Method Pattern	Skeleton algorithm structure with varying implementations.
+Q8	B. Adapter Pattern	Converts interface of a class into one the client expects.
+Q9	A. Proxy Pattern	Adds control over object access (e.g., permissions, logging).
+Q10	C. Command Pattern	Encapsulates commands for undo/redo behavior.
+
+---------------------------------------------------
+
+Q1.
+Correct Answer: C. Enum-based Singleton
+Explanation:
+Enum-based Singleton is the most robust way to implement a Singleton in Java. It provides:
+
+Thread safety,
+
+Serialization safety, and
+
+Protection against reflection attacks.
+This ensures that the configuration class loads settings only once and offers global access reliably.
+
+Q2.
+Correct Answer: A. Factory Pattern
+Explanation:
+The Factory Pattern is ideal for creating objects based on input or conditions without exposing the instantiation logic. In this case, based on the user's profile, it can return Silver, Gold, or Platinum card instances.
+
+Q3.
+Correct Answer: C. Builder Pattern
+Explanation:
+The Builder Pattern helps construct complex objects step-by-step and is great when you have multiple optional parameters (like toppings, cheese, crust in a Pizza). It improves readability and maintainability over constructors with many parameters.
+
+Q4.
+Correct Answer: B. Decorator Pattern
+Explanation:
+The Decorator Pattern allows you to add responsibilities or features to an object dynamically. Perfect for billing systems where a base product (coffee) can be enhanced with various add-ons like milk, cream, or sugar.
+
+Q5.
+Correct Answer: B. Observer Pattern
+Explanation:
+The Observer Pattern defines a one-to-many dependency, so when the subject (weather data) changes, all its observers (mobile app, website, alert system) are automatically notified and updated.
+
+Q6.
+Correct Answer: B. Strategy Pattern
+Explanation:
+The Strategy Pattern allows you to select an algorithm at runtime. In an e-commerce system, various discount mechanisms (coupon, seasonal, loyalty) can be encapsulated and switched dynamically based on context.
+
+Q7.
+Correct Answer: B. Template Method Pattern
+Explanation:
+Template Method defines the skeleton of an algorithm (e.g., extract-transform-load), letting subclasses override specific steps. This works well when the overall structure remains the same but implementations differ across databases.
+
+Q8.
+Correct Answer: B. Adapter Pattern
+Explanation:
+The Adapter Pattern helps convert an incompatible interface into one the client expects. It acts as a bridge between the third-party library and your system, allowing seamless integration.
+
+Q9.
+Correct Answer: A. Proxy Pattern
+Explanation:
+The Proxy Pattern controls access to another object, adding extra functionality like access control or logging before delegating the request to the actual object.
+
+Q10.
+Correct Answer: C. Command Pattern
+Explanation:
+The Command Pattern encapsulates a request as an object, which makes it easy to log, queue, undo, or redo actions. In a drawing application, user actions like draw or erase are stored as command objects for undo/redo support.

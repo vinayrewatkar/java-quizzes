@@ -1,0 +1,63 @@
+What Are Design Patterns?
+===============================
+Design patterns are proven solutions to common software design problems. They are not code, but templates that help developers write flexible, reusable, and maintainable code.
+
+Why Use Design Patterns?
+=================================
+Promote best practices
+Improve code readability and reuse
+Make code easier to maintain and extend
+Help in object-oriented design
+
+
+Design Patterns are mainly divided into three categories:
+==========================================================
+
+1. Creational Patterns – Deal with object creation
+-----------------------------------------------------
+Singleton – Only one instance (e.g., Runtime.getRuntime())
+
+Factory Method – Creates objects without specifying exact class
+
+Abstract Factory – Creates families of related objects
+
+Builder – Step-by-step object creation
+
+Prototype – Clones existing objects
+
+
+2. Structural Patterns – Deal with class and object composition
+--------------------------------------------------------------------
+Adapter – Converts one interface to another (e.g., InputStreamReader)
+
+Decorator – Adds behavior without modifying original class (e.g., BufferedReader)
+
+Facade – Simplifies complex subsystem with a single interface
+
+Composite – Tree-like structure for part-whole hierarchies
+
+Proxy – Acts as a placeholder for another object
+
+Bridge – Separates abstraction from implementation
+
+Flyweight – Reduces memory by sharing common parts
+
+3. Behavioral Patterns – Deal with object interaction and responsibility
+------------------------------------------------------------------------
+Observer – Notifies objects about state change (e.g., java.util.Observer)
+
+Strategy – Allows selecting algorithm at runtime
+
+Command – Encapsulates a request as an object
+
+Template Method – Defines skeleton of an algorithm
+
+Iterator – Sequential access to elements (e.g., Iterator)
+
+State – Changes behavior when state changes
+
+Mediator – Centralized communication between objects
+
+Chain of Responsibility – Passes request along chain of handlers
+
+Memento – Saves and restores object state
